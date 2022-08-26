@@ -25,6 +25,7 @@
 		30F26BDA28B9669B003BF696 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BD928B9669B003BF696 /* Bindable.swift */; };
 		30F26BDC28B966AE003BF696 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BDB28B966AE003BF696 /* Coordinator.swift */; };
 		30F26BDE28B966C2003BF696 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BDD28B966C2003BF696 /* NetworkRepository.swift */; };
+		30F26BE028B96827003BF696 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BDF28B96827003BF696 /* HomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		30F26BD928B9669B003BF696 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		30F26BDB28B966AE003BF696 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		30F26BDD28B966C2003BF696 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		30F26BDF28B96827003BF696 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		30F26BCA28B964FA003BF696 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30F26BDF28B96827003BF696 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				30F26BC228B964A7003BF696 /* Localizable.swift in Sources */,
 				30F26B8528B96307003BF696 /* AppDelegate.swift in Sources */,
 				30F26BBE28B96475003BF696 /* UIViewController+Extensions.swift in Sources */,
+				30F26BE028B96827003BF696 /* HomeModel.swift in Sources */,
 				30F26BBC28B96450003BF696 /* AppConfigurations.swift in Sources */,
 				30F26BD228B965A7003BF696 /* PostsRepository.swift in Sources */,
 				30F26BCC28B9650E003BF696 /* HomeCoordinator.swift in Sources */,

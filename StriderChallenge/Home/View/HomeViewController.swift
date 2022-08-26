@@ -8,6 +8,13 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    // MARK: - Private Properties
+    
+    private var loading: UIActivityIndicatorView?
+    
+    // MARK: - ViewModel
+    var viewModel: HomeViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

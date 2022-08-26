@@ -19,7 +19,7 @@ class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let viewModel = HomeViewModel(with: WeatherRepository(), coordinator: self)
+        let viewModel = HomeViewModel(with: PostsRepository(), coordinator: self)
         
         let vc = HomeViewController()
         vc.viewModel = viewModel
