@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26C45D35488E7CB1A19030D7 /* Pods_StriderChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56E9A6FC8044D62E7C2F9BA /* Pods_StriderChallengeTests.framework */; };
 		30F26B8528B96307003BF696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26B8428B96307003BF696 /* AppDelegate.swift */; };
 		30F26B8928B96307003BF696 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26B8828B96307003BF696 /* HomeViewController.swift */; };
 		30F26B8E28B96308003BF696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F26B8D28B96308003BF696 /* Assets.xcassets */; };
@@ -26,6 +27,10 @@
 		30F26BDC28B966AE003BF696 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BDB28B966AE003BF696 /* Coordinator.swift */; };
 		30F26BDE28B966C2003BF696 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BDD28B966C2003BF696 /* NetworkRepository.swift */; };
 		30F26BE028B96827003BF696 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BDF28B96827003BF696 /* HomeModel.swift */; };
+		30F26BE228B96E01003BF696 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BE128B96E01003BF696 /* View+Extensions.swift */; };
+		30F26BE528B970C4003BF696 /* UserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BE428B970C4003BF696 /* UserDelegate.swift */; };
+		30F26BE728B970E1003BF696 /* UIProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BE628B970E1003BF696 /* UIProtocols.swift */; };
+		A2DFF69D44F5C1031C7C228A /* Pods_StriderChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A16002333905D24477FF14E /* Pods_StriderChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E86E208FFA373C02D719336 /* Pods-StriderChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StriderChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-StriderChallengeTests/Pods-StriderChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		30F26B8128B96307003BF696 /* StriderChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StriderChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F26B8428B96307003BF696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F26B8828B96307003BF696 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +67,14 @@
 		30F26BDB28B966AE003BF696 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		30F26BDD28B966C2003BF696 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 		30F26BDF28B96827003BF696 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		30F26BE128B96E01003BF696 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		30F26BE428B970C4003BF696 /* UserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDelegate.swift; sourceTree = "<group>"; };
+		30F26BE628B970E1003BF696 /* UIProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProtocols.swift; sourceTree = "<group>"; };
+		3A16002333905D24477FF14E /* Pods_StriderChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StriderChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4743D97034D14FE3C32BF036 /* Pods-StriderChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StriderChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-StriderChallengeTests/Pods-StriderChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D8CA8839D28944F70D5A797C /* Pods-StriderChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StriderChallenge.debug.xcconfig"; path = "Target Support Files/Pods-StriderChallenge/Pods-StriderChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		E56E9A6FC8044D62E7C2F9BA /* Pods_StriderChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StriderChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA39A8D9F6280350C1B5DDCA /* Pods-StriderChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StriderChallenge.release.xcconfig"; path = "Target Support Files/Pods-StriderChallenge/Pods-StriderChallenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DFF69D44F5C1031C7C228A /* Pods_StriderChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C45D35488E7CB1A19030D7 /* Pods_StriderChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +103,8 @@
 				30F26B8328B96307003BF696 /* StriderChallenge */,
 				30F26B9A28B96308003BF696 /* StriderChallengeTests */,
 				30F26B8228B96307003BF696 /* Products */,
+				DAC7F1621D15A926BDEC60D8 /* Pods */,
+				4F5EEE957041CA5E19E4DC2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +171,7 @@
 			children = (
 				30F26BBD28B96475003BF696 /* UIViewController+Extensions.swift */,
 				30F26BBF28B96487003BF696 /* String+Extensions.swift */,
+				30F26BE128B96E01003BF696 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,6 +249,7 @@
 		30F26BD528B96666003BF696 /* Fundamentals */ = {
 			isa = PBXGroup;
 			children = (
+				30F26BE328B970B6003BF696 /* Protocols */,
 				30F26BD628B96675003BF696 /* Binding */,
 				30F26BD728B9667B003BF696 /* Coordinator */,
 				30F26BD828B96680003BF696 /* Network */,
@@ -261,6 +281,35 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		30F26BE328B970B6003BF696 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BE428B970C4003BF696 /* UserDelegate.swift */,
+				30F26BE628B970E1003BF696 /* UIProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4F5EEE957041CA5E19E4DC2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A16002333905D24477FF14E /* Pods_StriderChallenge.framework */,
+				E56E9A6FC8044D62E7C2F9BA /* Pods_StriderChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAC7F1621D15A926BDEC60D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8CA8839D28944F70D5A797C /* Pods-StriderChallenge.debug.xcconfig */,
+				FA39A8D9F6280350C1B5DDCA /* Pods-StriderChallenge.release.xcconfig */,
+				4743D97034D14FE3C32BF036 /* Pods-StriderChallengeTests.debug.xcconfig */,
+				1E86E208FFA373C02D719336 /* Pods-StriderChallengeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,9 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30F26BAB28B96308003BF696 /* Build configuration list for PBXNativeTarget "StriderChallenge" */;
 			buildPhases = (
+				EBDE55FB03916FF6E023735E /* [CP] Check Pods Manifest.lock */,
 				30F26B7D28B96307003BF696 /* Sources */,
 				30F26B7E28B96307003BF696 /* Frameworks */,
 				30F26B7F28B96307003BF696 /* Resources */,
+				1EC9D905C5EBBC47968A477D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,9 +336,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30F26BAE28B96308003BF696 /* Build configuration list for PBXNativeTarget "StriderChallengeTests" */;
 			buildPhases = (
+				063EA7BEC5685FDEFE178158 /* [CP] Check Pods Manifest.lock */,
 				30F26B9328B96308003BF696 /* Sources */,
 				30F26B9428B96308003BF696 /* Frameworks */,
 				30F26B9528B96308003BF696 /* Resources */,
+				8A55B803B20397F1DFA01C28 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,17 +410,101 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		063EA7BEC5685FDEFE178158 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StriderChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EC9D905C5EBBC47968A477D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StriderChallenge/Pods-StriderChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StriderChallenge/Pods-StriderChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StriderChallenge/Pods-StriderChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A55B803B20397F1DFA01C28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StriderChallengeTests/Pods-StriderChallengeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StriderChallengeTests/Pods-StriderChallengeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StriderChallengeTests/Pods-StriderChallengeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBDE55FB03916FF6E023735E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StriderChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		30F26B7D28B96307003BF696 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				30F26BDE28B966C2003BF696 /* NetworkRepository.swift in Sources */,
+				30F26BE728B970E1003BF696 /* UIProtocols.swift in Sources */,
+				30F26BE528B970C4003BF696 /* UserDelegate.swift in Sources */,
 				30F26B8928B96307003BF696 /* HomeViewController.swift in Sources */,
 				30F26BD428B96614003BF696 /* HomeViewModel.swift in Sources */,
 				30F26BDC28B966AE003BF696 /* Coordinator.swift in Sources */,
 				30F26BDA28B9669B003BF696 /* Bindable.swift in Sources */,
 				30F26BC228B964A7003BF696 /* Localizable.swift in Sources */,
+				30F26BE228B96E01003BF696 /* View+Extensions.swift in Sources */,
 				30F26B8528B96307003BF696 /* AppDelegate.swift in Sources */,
 				30F26BBE28B96475003BF696 /* UIViewController+Extensions.swift in Sources */,
 				30F26BE028B96827003BF696 /* HomeModel.swift in Sources */,
@@ -526,6 +663,7 @@
 		};
 		30F26BAC28B96308003BF696 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8CA8839D28944F70D5A797C /* Pods-StriderChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -554,6 +692,7 @@
 		};
 		30F26BAD28B96308003BF696 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA39A8D9F6280350C1B5DDCA /* Pods-StriderChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -582,6 +721,7 @@
 		};
 		30F26BAF28B96308003BF696 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4743D97034D14FE3C32BF036 /* Pods-StriderChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -602,6 +742,7 @@
 		};
 		30F26BB028B96308003BF696 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E86E208FFA373C02D719336 /* Pods-StriderChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

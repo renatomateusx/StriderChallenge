@@ -1,0 +1,24 @@
+PODS:
+  - ActiveLabel (1.1.0)
+  - Kingfisher (4.10.1)
+  - SnapshotTesting (1.8.2)
+
+DEPENDENCIES:
+  - ActiveLabel
+  - Kingfisher (~> 4.0)
+  - SnapshotTesting (~> 1.8.1)
+
+SPEC REPOS:
+  trunk:
+    - ActiveLabel
+    - Kingfisher
+    - SnapshotTesting
+
+SPEC CHECKSUMS:
+  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  SnapshotTesting: 38947050d13960d57a4a9c166fcf51bca7d56970
+
+PODFILE CHECKSUM: fdbe26b986863a7d28dea62e0339b08a55ea5f47
+
+COCOAPODS: 1.11.3

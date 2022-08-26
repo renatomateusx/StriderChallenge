@@ -1,0 +1,6 @@
+framework module Pods_StriderChallenge {
+  umbrella header "Pods-StriderChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
