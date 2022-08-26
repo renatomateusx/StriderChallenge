@@ -8,25 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		30F26B8528B96307003BF696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26B8428B96307003BF696 /* AppDelegate.swift */; };
-		30F26B8728B96307003BF696 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26B8628B96307003BF696 /* SceneDelegate.swift */; };
-		30F26B8928B96307003BF696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26B8828B96307003BF696 /* ViewController.swift */; };
-		30F26B8C28B96307003BF696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F26B8A28B96307003BF696 /* Main.storyboard */; };
+		30F26B8928B96307003BF696 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26B8828B96307003BF696 /* HomeViewController.swift */; };
 		30F26B8E28B96308003BF696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F26B8D28B96308003BF696 /* Assets.xcassets */; };
 		30F26B9128B96308003BF696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F26B8F28B96308003BF696 /* LaunchScreen.storyboard */; };
 		30F26B9C28B96308003BF696 /* StriderChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26B9B28B96308003BF696 /* StriderChallengeTests.swift */; };
-		30F26BA628B96308003BF696 /* StriderChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BA528B96308003BF696 /* StriderChallengeUITests.swift */; };
-		30F26BA828B96308003BF696 /* StriderChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BA728B96308003BF696 /* StriderChallengeUITestsLaunchTests.swift */; };
+		30F26BBA28B9643C003BF696 /* AppMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BB928B9643C003BF696 /* AppMainCoordinator.swift */; };
+		30F26BBC28B96450003BF696 /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BBB28B96450003BF696 /* AppConfigurations.swift */; };
+		30F26BBE28B96475003BF696 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BBD28B96475003BF696 /* UIViewController+Extensions.swift */; };
+		30F26BC028B96487003BF696 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BBF28B96487003BF696 /* String+Extensions.swift */; };
+		30F26BC228B964A7003BF696 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BC128B964A7003BF696 /* Localizable.swift */; };
+		30F26BC428B964BD003BF696 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30F26BC328B964BC003BF696 /* Localizable.strings */; };
+		30F26BCC28B9650E003BF696 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BCB28B9650E003BF696 /* HomeCoordinator.swift */; };
+		30F26BD028B96578003BF696 /* PostsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BCF28B96578003BF696 /* PostsEndPoint.swift */; };
+		30F26BD228B965A7003BF696 /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BD128B965A7003BF696 /* PostsRepository.swift */; };
+		30F26BD428B96614003BF696 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BD328B96614003BF696 /* HomeViewModel.swift */; };
+		30F26BDA28B9669B003BF696 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BD928B9669B003BF696 /* Bindable.swift */; };
+		30F26BDC28B966AE003BF696 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BDB28B966AE003BF696 /* Coordinator.swift */; };
+		30F26BDE28B966C2003BF696 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F26BDD28B966C2003BF696 /* NetworkRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		30F26B9828B96308003BF696 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 30F26B7928B96307003BF696 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 30F26B8028B96307003BF696;
-			remoteInfo = StriderChallenge;
-		};
-		30F26BA228B96308003BF696 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30F26B7928B96307003BF696 /* Project object */;
 			proxyType = 1;
@@ -38,17 +40,25 @@
 /* Begin PBXFileReference section */
 		30F26B8128B96307003BF696 /* StriderChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StriderChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F26B8428B96307003BF696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30F26B8628B96307003BF696 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30F26B8828B96307003BF696 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		30F26B8B28B96307003BF696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30F26B8828B96307003BF696 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		30F26B8D28B96308003BF696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30F26B9028B96308003BF696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30F26B9228B96308003BF696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30F26B9728B96308003BF696 /* StriderChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StriderChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F26B9B28B96308003BF696 /* StriderChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StriderChallengeTests.swift; sourceTree = "<group>"; };
-		30F26BA128B96308003BF696 /* StriderChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StriderChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30F26BA528B96308003BF696 /* StriderChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StriderChallengeUITests.swift; sourceTree = "<group>"; };
-		30F26BA728B96308003BF696 /* StriderChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StriderChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		30F26BB928B9643C003BF696 /* AppMainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainCoordinator.swift; sourceTree = "<group>"; };
+		30F26BBB28B96450003BF696 /* AppConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
+		30F26BBD28B96475003BF696 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		30F26BBF28B96487003BF696 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		30F26BC128B964A7003BF696 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		30F26BC328B964BC003BF696 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		30F26BCB28B9650E003BF696 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		30F26BCF28B96578003BF696 /* PostsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsEndPoint.swift; sourceTree = "<group>"; };
+		30F26BD128B965A7003BF696 /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
+		30F26BD328B96614003BF696 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		30F26BD928B9669B003BF696 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		30F26BDB28B966AE003BF696 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		30F26BDD28B966C2003BF696 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +76,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30F26B9E28B96308003BF696 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +84,6 @@
 			children = (
 				30F26B8328B96307003BF696 /* StriderChallenge */,
 				30F26B9A28B96308003BF696 /* StriderChallengeTests */,
-				30F26BA428B96308003BF696 /* StriderChallengeUITests */,
 				30F26B8228B96307003BF696 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +93,6 @@
 			children = (
 				30F26B8128B96307003BF696 /* StriderChallenge.app */,
 				30F26B9728B96308003BF696 /* StriderChallengeTests.xctest */,
-				30F26BA128B96308003BF696 /* StriderChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +100,10 @@
 		30F26B8328B96307003BF696 /* StriderChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				30F26B8428B96307003BF696 /* AppDelegate.swift */,
-				30F26B8628B96307003BF696 /* SceneDelegate.swift */,
-				30F26B8828B96307003BF696 /* ViewController.swift */,
-				30F26B8A28B96307003BF696 /* Main.storyboard */,
-				30F26B8D28B96308003BF696 /* Assets.xcassets */,
-				30F26B8F28B96308003BF696 /* LaunchScreen.storyboard */,
-				30F26B9228B96308003BF696 /* Info.plist */,
+				30F26BB428B96390003BF696 /* Base.Iproj */,
+				30F26BB528B963A0003BF696 /* Resources */,
+				30F26BC528B964D5003BF696 /* Home */,
+				30F26BD528B96666003BF696 /* Fundamentals */,
 			);
 			path = StriderChallenge;
 			sourceTree = "<group>";
@@ -118,13 +116,146 @@
 			path = StriderChallengeTests;
 			sourceTree = "<group>";
 		};
-		30F26BA428B96308003BF696 /* StriderChallengeUITests */ = {
+		30F26BB428B96390003BF696 /* Base.Iproj */ = {
 			isa = PBXGroup;
 			children = (
-				30F26BA528B96308003BF696 /* StriderChallengeUITests.swift */,
-				30F26BA728B96308003BF696 /* StriderChallengeUITestsLaunchTests.swift */,
+				30F26B8F28B96308003BF696 /* LaunchScreen.storyboard */,
 			);
-			path = StriderChallengeUITests;
+			path = Base.Iproj;
+			sourceTree = "<group>";
+		};
+		30F26BB528B963A0003BF696 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BB628B963A8003BF696 /* Application */,
+				30F26BB728B963AD003BF696 /* Extensions */,
+				30F26BB828B963B5003BF696 /* Localizable */,
+				30F26B8D28B96308003BF696 /* Assets.xcassets */,
+				30F26B9228B96308003BF696 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		30F26BB628B963A8003BF696 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				30F26B8428B96307003BF696 /* AppDelegate.swift */,
+				30F26BB928B9643C003BF696 /* AppMainCoordinator.swift */,
+				30F26BBB28B96450003BF696 /* AppConfigurations.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		30F26BB728B963AD003BF696 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BBD28B96475003BF696 /* UIViewController+Extensions.swift */,
+				30F26BBF28B96487003BF696 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30F26BB828B963B5003BF696 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BC128B964A7003BF696 /* Localizable.swift */,
+				30F26BC328B964BC003BF696 /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		30F26BC528B964D5003BF696 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BCA28B964FA003BF696 /* Model */,
+				30F26BC928B964F3003BF696 /* View */,
+				30F26BC828B964E8003BF696 /* ViewModel */,
+				30F26BC728B964E1003BF696 /* Repository */,
+				30F26BC628B964DB003BF696 /* Coordinator */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		30F26BC628B964DB003BF696 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BCB28B9650E003BF696 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		30F26BC728B964E1003BF696 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BCD28B96552003BF696 /* EndPoint */,
+				30F26BD128B965A7003BF696 /* PostsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		30F26BC828B964E8003BF696 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BD328B96614003BF696 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30F26BC928B964F3003BF696 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30F26B8828B96307003BF696 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30F26BCA28B964FA003BF696 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30F26BCD28B96552003BF696 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BCF28B96578003BF696 /* PostsEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		30F26BD528B96666003BF696 /* Fundamentals */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BD628B96675003BF696 /* Binding */,
+				30F26BD728B9667B003BF696 /* Coordinator */,
+				30F26BD828B96680003BF696 /* Network */,
+			);
+			path = Fundamentals;
+			sourceTree = "<group>";
+		};
+		30F26BD628B96675003BF696 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BD928B9669B003BF696 /* Bindable.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		30F26BD728B9667B003BF696 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BDB28B966AE003BF696 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		30F26BD828B96680003BF696 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				30F26BDD28B966C2003BF696 /* NetworkRepository.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +296,6 @@
 			productReference = 30F26B9728B96308003BF696 /* StriderChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		30F26BA028B96308003BF696 /* StriderChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 30F26BB128B96308003BF696 /* Build configuration list for PBXNativeTarget "StriderChallengeUITests" */;
-			buildPhases = (
-				30F26B9D28B96308003BF696 /* Sources */,
-				30F26B9E28B96308003BF696 /* Frameworks */,
-				30F26B9F28B96308003BF696 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				30F26BA328B96308003BF696 /* PBXTargetDependency */,
-			);
-			name = StriderChallengeUITests;
-			productName = StriderChallengeUITests;
-			productReference = 30F26BA128B96308003BF696 /* StriderChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +310,6 @@
 						CreatedOnToolsVersion = 13.3;
 					};
 					30F26B9628B96308003BF696 = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = 30F26B8028B96307003BF696;
-					};
-					30F26BA028B96308003BF696 = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = 30F26B8028B96307003BF696;
 					};
@@ -221,7 +330,6 @@
 			targets = (
 				30F26B8028B96307003BF696 /* StriderChallenge */,
 				30F26B9628B96308003BF696 /* StriderChallengeTests */,
-				30F26BA028B96308003BF696 /* StriderChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,19 +340,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F26B9128B96308003BF696 /* LaunchScreen.storyboard in Resources */,
+				30F26BC428B964BD003BF696 /* Localizable.strings in Resources */,
 				30F26B8E28B96308003BF696 /* Assets.xcassets in Resources */,
-				30F26B8C28B96307003BF696 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		30F26B9528B96308003BF696 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		30F26B9F28B96308003BF696 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,9 +359,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30F26B8928B96307003BF696 /* ViewController.swift in Sources */,
+				30F26BDE28B966C2003BF696 /* NetworkRepository.swift in Sources */,
+				30F26B8928B96307003BF696 /* HomeViewController.swift in Sources */,
+				30F26BD428B96614003BF696 /* HomeViewModel.swift in Sources */,
+				30F26BDC28B966AE003BF696 /* Coordinator.swift in Sources */,
+				30F26BDA28B9669B003BF696 /* Bindable.swift in Sources */,
+				30F26BC228B964A7003BF696 /* Localizable.swift in Sources */,
 				30F26B8528B96307003BF696 /* AppDelegate.swift in Sources */,
-				30F26B8728B96307003BF696 /* SceneDelegate.swift in Sources */,
+				30F26BBE28B96475003BF696 /* UIViewController+Extensions.swift in Sources */,
+				30F26BBC28B96450003BF696 /* AppConfigurations.swift in Sources */,
+				30F26BD228B965A7003BF696 /* PostsRepository.swift in Sources */,
+				30F26BCC28B9650E003BF696 /* HomeCoordinator.swift in Sources */,
+				30F26BC028B96487003BF696 /* String+Extensions.swift in Sources */,
+				30F26BBA28B9643C003BF696 /* AppMainCoordinator.swift in Sources */,
+				30F26BD028B96578003BF696 /* PostsEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +384,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30F26B9D28B96308003BF696 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				30F26BA828B96308003BF696 /* StriderChallengeUITestsLaunchTests.swift in Sources */,
-				30F26BA628B96308003BF696 /* StriderChallengeUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,22 +392,9 @@
 			target = 30F26B8028B96307003BF696 /* StriderChallenge */;
 			targetProxy = 30F26B9828B96308003BF696 /* PBXContainerItemProxy */;
 		};
-		30F26BA328B96308003BF696 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 30F26B8028B96307003BF696 /* StriderChallenge */;
-			targetProxy = 30F26BA228B96308003BF696 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		30F26B8A28B96307003BF696 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				30F26B8B28B96307003BF696 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		30F26B8F28B96308003BF696 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,7 +529,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StriderChallenge/Info.plist;
+				INFOPLIST_FILE = StriderChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -467,7 +557,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StriderChallenge/Info.plist;
+				INFOPLIST_FILE = StriderChallenge/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -526,42 +616,6 @@
 			};
 			name = Release;
 		};
-		30F26BB228B96308003BF696 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.renatomateusx.StriderChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StriderChallenge;
-			};
-			name = Debug;
-		};
-		30F26BB328B96308003BF696 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.renatomateusx.StriderChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StriderChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,15 +642,6 @@
 			buildConfigurations = (
 				30F26BAF28B96308003BF696 /* Debug */,
 				30F26BB028B96308003BF696 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		30F26BB128B96308003BF696 /* Build configuration list for PBXNativeTarget "StriderChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				30F26BB228B96308003BF696 /* Debug */,
-				30F26BB328B96308003BF696 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

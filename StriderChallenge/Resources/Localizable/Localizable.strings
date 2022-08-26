@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  StriderChallenge
+
+  Created by Renato Mateus on 26/08/22.
+  
+*/
+
+"home_title" = "Please, allow the app to access your location.\nTouch in any place of the screen.";
+"oops_title" = "Oops!";
+"oops_message"= "To use this app you should enable access location.\n Please, go to app configuration and enable it";
+"no_city_mentioned" = "No City mentioned";
+"min_max_tempreture" = "Low: %@° High: %@°";
+"wind_speed" = "Wind: %@ (%@)";
+
+
+// No data downloaded
+
+"no_data_downloaded" = "No data was downloaded.";
