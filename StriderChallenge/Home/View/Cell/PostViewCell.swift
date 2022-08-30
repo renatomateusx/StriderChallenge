@@ -12,6 +12,7 @@ import ActiveLabel
 protocol PostViewCellDelegate: AnyObject {
     func didTapProfileImage(_ cell: PostViewCell)
     func didTapReplyPost(_ cell: PostViewCell)
+    func didTapRepostPost(_ cell: PostViewCell)
     func didTapLikePost(_ cell: PostViewCell)
     func didTapUsername(withUsername username:String)
 }
@@ -152,7 +153,7 @@ class PostViewCell: UICollectionViewCell  {
     }
     
     @objc func didTapRetweetButton() {
-        
+        delegate?.didTapRepostPost(self)
     }
     
     @objc func didTapLikeButton() {

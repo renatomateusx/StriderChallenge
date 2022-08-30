@@ -13,7 +13,7 @@ enum Localizable: String {
     case oopsMessage = "oops_message"
     case noCityMentioned = "no_city_mentioned"
     case minMaxTempreture = "min_max_tempreture"
-    case windSpeed = "wind_speed"
+    case cantDeleteOrReportPosts = "cant_delete_or_report_posts"
     case charLeft = "char_left"
     
     case postLimitReachedOut = "post_limit_reached_out"

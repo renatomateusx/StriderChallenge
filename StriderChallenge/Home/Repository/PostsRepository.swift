@@ -59,6 +59,13 @@ extension PostsRepository: PostsRepositoryProtocol {
                 REF_USER_REPLIES.child(uid).updateChildValues([post.postID: replyKey],
                                                               withCompletionBlock: completion)
             }
+        case .repost(let post):
+            values["repostingFrom"] = post.user.username
+            REF_POST_REPLIES.child(post.postID).childByAutoId().updateChildValues(values) { (err, ref) in
+                guard let replyKey = ref.key else { return }
+                REF_USER_REPLIES.child(uid).updateChildValues([post.postID: replyKey],
+                                                              withCompletionBlock: completion)
+            }
         }
     }
     

@@ -169,10 +169,21 @@ extension PostsViewController: ActionSheetDelegate {
             userViewModel.unfollowUser(uid: user.uuid) { result in
                 print("DEBUG: Did unfollow user \(user.username)")
             }
-        case .report(let tweet):
-            print("DEBUG: Report Twet \(tweet.text)")
-        case .delete(let tweet):
-            print("DEBUG: Delete Twet \(tweet.text)")
+        case .report(let post):
+            print("DEBUG: Report Post \(post.text)")
+            showAlertError()
+            
+        case .delete(let post):
+            print("DEBUG: Delete Post \(post.text)")
+            showAlertError()
+        }
+    }
+}
+
+extension PostsViewController {
+    func showAlertError() {
+        DispatchQueue.main.async {
+            self.alert(title: .localized(.oopsTitle), message: .localized(.cantDeleteOrReportPosts))
         }
     }
 }

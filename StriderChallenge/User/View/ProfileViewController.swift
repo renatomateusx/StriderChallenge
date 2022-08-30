@@ -166,6 +166,7 @@ extension ProfileViewController {
        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostViewCell.identifier, for: indexPath) as! PostViewCell
         let post = currentDataSource[indexPath.row]
         cell.configure(post: post)
+        cell.delegate = self
         return cell
     }
 }
@@ -228,9 +229,7 @@ extension ProfileViewController: ProfileHeaderDelegate {
         if user.isCurrentUser {
             let controller = EditProfileViewController(user: user)
             controller.delegate = self
-            let nav = UINavigationController(rootViewController: controller)
-            nav.modalPresentationStyle = .fullScreen
-            present(nav, animated: true, completion: nil)
+            coordinator.presentVC(vc: controller)
             return
         }
         
@@ -273,6 +272,40 @@ extension ProfileViewController: EditProfileViewControllerDelegate{
         self.user = user
         self.collectionView.reloadData()
     }
+}
+
+//MARK: PostViewCellDelegate
+extension ProfileViewController: PostViewCellDelegate {
+    func didTapUsername(withUsername username: String) {
+        viewModel.fetchUser(withUsername: username)
+    }
+    
+    func didTapLikePost(_ cell: PostViewCell) {
+        guard let post = cell.post else {return}
+        viewModel.likePost(post: post) {
+            guard var post = cell.post else {return}
+            post.didLiked.toggle()
+            let likes = post.didLiked ? post.likes - 1 : post.likes + 1
+            post.likes = likes
+            cell.configure(post: post)
+        }
+    }
+    
+    func didTapReplyPost(_ cell: PostViewCell) {
+        guard let post = cell.post else {return}
+        coordinator.goToReply(post: post)
+    }
+    
+    func didTapRepostPost(_ cell: PostViewCell) {
+        guard let post = cell.post else {return}
+        coordinator.goToRepost(post: post)
+    }
+    
+    func didTapProfileImage(_ cell: PostViewCell) {
+        guard let user = cell.user else {return}
+        coordinator.goToProfile(user: user)
+    }
+    
 }
 
 extension ProfileViewController {

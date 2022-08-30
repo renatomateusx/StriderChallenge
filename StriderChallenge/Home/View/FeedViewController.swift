@@ -209,7 +209,7 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//MARK: TweetViewCellDelegate
+//MARK: PostViewCellDelegate
 extension FeedViewController: PostViewCellDelegate {
     func didTapUsername(withUsername username: String) {
         viewModel.fetchUser(withUsername: username)
@@ -229,6 +229,11 @@ extension FeedViewController: PostViewCellDelegate {
     func didTapReplyPost(_ cell: PostViewCell) {
         guard let post = cell.post else {return}
         coordinator.goToReply(post: post)
+    }
+    
+    func didTapRepostPost(_ cell: PostViewCell) {
+        guard let post = cell.post else { return }
+        coordinator.goToRepost(post: post)
     }
     
     func didTapProfileImage(_ cell: PostViewCell) {

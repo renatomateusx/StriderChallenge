@@ -10,6 +10,7 @@ import Foundation
 enum UploadPostConfiguration {
     case post
     case reply(Post)
+    case repost(Post)
 }
 
 protocol FeedViewModelProtocol {
@@ -144,8 +145,13 @@ extension FeedViewModel {
             placeholderText = "Post your reply"
             shouldShowReplyLabel = true
             replyText = "Replying to @\(post.user.username)"
-        }
         
+        case .repost(let post):
+            actionButtonTitle = "Repost"
+            placeholderText = post.text
+            shouldShowReplyLabel = true
+            replyText = "Reposting from @\(post.user.username)"
+        }
         self.fetchPosts(page)
     }
 }

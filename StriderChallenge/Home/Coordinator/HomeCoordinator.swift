@@ -42,6 +42,16 @@ class HomeCoordinator: Coordinator {
         }
     }
     
+    func presentVC(vc: UIViewController) {
+        DispatchQueue.main.async {
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            vc.modalPresentationStyle = .fullScreen
+            self.navigationController.present(nav, animated: true, completion: nil)
+        }
+    }
+    
+    
     func goToReply(post: Post) {
         DispatchQueue.main.async {
             
@@ -51,6 +61,21 @@ class HomeCoordinator: Coordinator {
                                                       coordiinator: self,
                                                       user: post.user,
                                                       config: .reply(post))
+            
+            
+            self.navigationController.pushViewController(controller, animated: true)
+        }
+    }
+    
+    func goToRepost(post: Post) {
+        DispatchQueue.main.async {
+            
+            self.feedViewModel.setConfig(.repost(post))
+            self.feedViewModel.fetchReplies(forUser: post.user)
+            let controller = UploadPostViewController(viewModel: self.feedViewModel,
+                                                      coordiinator: self,
+                                                      user: post.user,
+                                                      config: .repost(post))
             
             
             self.navigationController.pushViewController(controller, animated: true)
