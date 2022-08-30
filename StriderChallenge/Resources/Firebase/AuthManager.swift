@@ -28,12 +28,12 @@ public class AuthManager {
                     }
                     // Insert into database
                     guard let uuid = result?.user.uid else {return}
-                    
+                    let joinedDate = Int(NSDate().timeIntervalSince1970)
                     let credentialsList = ["email": credentials.email,
                                            "username": credentials.username,
                                            "fullname": credentials.fullname,
                                            "profileImageUrl": nil,
-                                           "joinedDate": nil] as [String : AnyObject]
+                                           "joinedDate": joinedDate] as [String : AnyObject]
                     
                     DatabaseManager.shared.updateUser(with: uuid, values: credentialsList) { inserted in
                         if inserted {
@@ -84,6 +84,4 @@ public class AuthManager {
             return
         }
     }
-    
 }
-

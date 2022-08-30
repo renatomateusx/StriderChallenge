@@ -46,6 +46,18 @@ class ProfileViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureScreen()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.isHidden = true
+        
+        configureScreen()
+    }
+    
+    private func configureScreen() {
         setupObserver()
         configureCollectionView()
         fetchPosts()
@@ -55,17 +67,11 @@ class ProfileViewController: UICollectionViewController {
         fetchUsersStatus()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.isHidden = true
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    func setupObserver() {
+    private func setupObserver() {
         viewModel.error.bind { [weak self] _ in
             if let error = self?.viewModel.error.value {
                 DispatchQueue.main.async {
@@ -266,5 +272,11 @@ extension ProfileViewController: EditProfileViewControllerDelegate{
         controller.dismiss(animated: true, completion: nil)
         self.user = user
         self.collectionView.reloadData()
+    }
+}
+
+extension ProfileViewController {
+    func setPosts(_ posts: Posts) {
+        self.posts = posts
     }
 }

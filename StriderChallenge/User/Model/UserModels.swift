@@ -28,6 +28,7 @@ struct User: Codable {
     var status: UserRelationStats?
     var isCurrentUser: Bool { Auth.auth().currentUser?.uid == uuid }
     var bio: String?
+    var joinedDate: String?
     
     init(with uuid: String){
         self.uuid = uuid
@@ -44,11 +45,13 @@ struct User: Codable {
         let username = dictionary["username"] as? String ?? ""
         let fullname = dictionary["fullname"] as? String ?? ""
         let bio = dictionary["bio"] as? String ?? ""
+        let joinedDate = dictionary["joinedDate"] as? String ?? ""
         
         self.email = email
         self.username = username
         self.fullname = fullname
         self.bio = bio
+        self.joinedDate = joinedDate
         
         self.profileImage = URL(string: String.init())
         if let profileImage = dictionary["profileImageUrl"] as? String {

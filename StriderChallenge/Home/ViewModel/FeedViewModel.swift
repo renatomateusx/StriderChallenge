@@ -36,9 +36,6 @@ protocol FeedViewModelProtocol {
     func checkIfUserLikedPost(_ post: Post, completion: @escaping(Bool) ->Void)
     func fetchReplies(forUser user: User)
     func fetchLikes(forUser user: User)
-    
-    // MARK: Helpers
-    func getDateFrom(date: Date) -> String
 }
 
 class FeedViewModel: FeedViewModelProtocol {
@@ -79,9 +76,9 @@ class FeedViewModel: FeedViewModelProtocol {
     }
     
     func fetchPosts(_ page: Int, user: User) {
-        postService.fetchPosts(forUser: user, completion: { posts in
-            self.posts.value = posts
-            self.postsLocal.append(contentsOf: posts)
+        postService.fetchPosts(forUser: user, completion: { [weak self] posts in
+            self?.posts.value = posts
+            self?.postsLocal = posts
         })
     }
     
@@ -106,31 +103,31 @@ class FeedViewModel: FeedViewModelProtocol {
     }
     
     func likePost(post: Post, completion: @escaping() -> Void) {
-        postService.likePost(post: post) { error, ref in
+        postService.likePost(post: post) { [weak self] error, ref in
             if let error = error {
-                self.error.value = error
+                self?.error.value = error
             }
         }
         completion()
     }
     
     func fetchReplies(forUser user: User) {
-        postService.fetchReplies(forUser: user) { replies in
-            self.replies.value = replies
-            self.repliesLocal.append(contentsOf: replies)
+        postService.fetchReplies(forUser: user) { [weak self] replies in
+            self?.replies.value = replies
+            self?.repliesLocal = replies
         }
     }
     
     func fetchLikes(forUser user: User) {
-        postService.fetchLikes(forUser: user) { likes in
-            self.likes.value = likes
+        postService.fetchLikes(forUser: user) { [weak self] likes in
+            self?.likes.value = likes
         }
     }
     
     func fetchPosts(_ page: Int) {
-        postService.fetchPosts { posts in
-            self.posts.value = posts
-            self.postsLocal.append(contentsOf: posts)
+        postService.fetchPosts { [weak self] posts in
+            self?.posts.value = posts
+            self?.postsLocal = posts
         }
     }
 }
@@ -150,13 +147,5 @@ extension FeedViewModel {
         }
         
         self.fetchPosts(page)
-    }
-    
-    func getDateFrom(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        dateFormatter.dateStyle = .short  
-        let strDate = dateFormatter.string(from: date)
-        return strDate
     }
 }

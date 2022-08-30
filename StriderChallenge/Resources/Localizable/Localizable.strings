@@ -10,8 +10,7 @@
 "oops_title" = "Oops!";
 "oops_message"= "To use this app you should enable access location.\n Please, go to app configuration and enable it";
 "no_city_mentioned" = "No City mentioned";
-"min_max_tempreture" = "Low: %@° High: %@°";
-"wind_speed" = "Wind: %@ (%@)";
+"char_left" = "%@ characters left";
 
 "post_limit_reached_out" = "Post limit reached out";
 

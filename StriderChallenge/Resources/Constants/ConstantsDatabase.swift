@@ -31,3 +31,6 @@ let REF_USER_FOLLOWING = DB_REF.child("user-following")
 
 //Notifications
 let REF_NOTIFICATIONS = DB_REF.child("notifications")
+
+let CHARACTERS_LENGTH = 777
+let USERNAME_LENGTH = 14

@@ -17,7 +17,6 @@ class CaptionTextView: UITextView {
         return label
     }()
     
-    
     // MARK: Lifecycle
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)

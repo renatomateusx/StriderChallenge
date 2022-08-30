@@ -10,6 +10,8 @@ import Firebase
 protocol PostsRepositoryProtocol: AnyObject {
     
     var appConfiguration: AppConfigurations { get }
+    var posts: Posts { get }
+    var replies: Posts { get }
     
     func uploadPost(text: String, type: UploadPostConfiguration, completion: @escaping(DatabaseCompletion))
     func fetchPosts(forUser user: User, completion: @escaping(Posts) -> Void)

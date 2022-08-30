@@ -97,7 +97,6 @@ class MainTabViewController: UITabBarController, UIProtocols {
         self.delegate = self
         guard let user = user else { return }
         
-        
         let feed = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
         feed.viewModel = feedViewModel
         feed.coordinator = coordinator
@@ -110,6 +109,12 @@ class MainTabViewController: UITabBarController, UIProtocols {
         profile.coordinator = coordinator
         let nav2 = setTemplateNavController(image: "ic_person_outline_white_2x", rootViewController: profile)
         
+        feedViewModel.posts.bind { [weak self] _ in
+            if let posts = self?.feedViewModel.posts.value {
+                feed.setPosts(posts)
+                profile.setPosts(posts)
+            }
+        }
         
         viewControllers = [nav1, nav2]
         
@@ -144,6 +149,9 @@ extension MainTabViewController {
                                                       coordiinator: self.coordinator,
                                                       user: user,
                                                       config: .post)
+            controller.viewModel.result.bind { [weak self] _ in
+                self?.feedViewModel.fetchPosts(self?.feedViewModel.page ?? 0)
+            }
             self.coordinator.goToPost(vc: controller)
         }
     }

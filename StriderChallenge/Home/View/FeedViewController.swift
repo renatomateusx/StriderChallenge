@@ -25,6 +25,10 @@ class FeedViewController: UICollectionViewController, UIProtocols {
         didSet { collectionView.reloadData()}
     }
     
+    private var replies = Posts() {
+        didSet { collectionView.reloadData() }
+    }
+    
     private let logoImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "twitter_logo_blue"))
         imageView.contentMode = .scaleAspectFit
@@ -43,15 +47,20 @@ class FeedViewController: UICollectionViewController, UIProtocols {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
-        setupObserver()
-        fetchPosts()
+        configureScreen()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.isHidden = false
+        configureScreen()
+    }
+    
+    private func configureScreen() {
+        setupObserver()
+        configureUI()
+        fetchPosts()
     }
     
     //MARK: Helpers
@@ -102,6 +111,14 @@ class FeedViewController: UICollectionViewController, UIProtocols {
             }
         }
         
+        viewModel.replies.bind { [weak self] (_) in
+            if let replies = self?.viewModel.replies.value {
+                self?.replies = replies
+                self?.collectionView.refreshControl?.endRefreshing()
+                self?.loading?.stopAnimating()
+            }
+        }
+        
         viewModel.error.bind { [weak self] (_) in
             if let error = self?.viewModel.error.value {
                 DispatchQueue.main.async {
@@ -132,6 +149,7 @@ class FeedViewController: UICollectionViewController, UIProtocols {
     func fetchPosts(){
         collectionView.refreshControl?.beginRefreshing()
         viewModel.fetchPosts(0)
+        collectionView.refreshControl?.endRefreshing()
     }
     
     func checkIfUserLikedTweets(){
@@ -218,4 +236,10 @@ extension FeedViewController: PostViewCellDelegate {
         coordinator.goToProfile(user: user)
     }
     
+}
+
+extension FeedViewController {
+    func setPosts(_ posts: Posts) {
+        self.posts = posts
+    }
 }

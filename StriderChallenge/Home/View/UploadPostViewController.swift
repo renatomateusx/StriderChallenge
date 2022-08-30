@@ -61,6 +61,14 @@ class UploadPostViewController: UIViewController {
     
     private let captionTextView = CaptionTextView()
     
+    let charactersLeft: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .lightGray
+        label.text = "777 characters left"
+        return label
+    }()
+    
     // MARK: Lifecycle
     
     init(viewModel: FeedViewModel, coordiinator: HomeCoordinator, user: User, config: UploadPostConfiguration) {
@@ -89,52 +97,53 @@ class UploadPostViewController: UIViewController {
     
     @objc func didTapAddTweet(){
         guard let text = captionTextView.text else {return}
-        let todayPost = viewModel.getDateFrom(date: Date())
         
-        switch config {
-        case .post:
-            var count = 0
-            for rep in viewModel.postsLocal {
-                if let postedDate = rep.timestamp {
-                    let finalDate = viewModel.getDateFrom(date: postedDate)
-                    if finalDate == todayPost {
-                        count += 1
-                        
-                    }
-                }
-            }
-            if count >= 5 {
-                DispatchQueue.main.async {
-                    self.alert(title: .localized(.oopsTitle),
-                               message: .localized(.postLimitReachedOut))
-                }
-                return
-            }
-        case .reply(_):
-            var count = 0
-            for rep in viewModel.repliesLocal {
-                if let postedDate = rep.timestamp {
-                    let finalDate = viewModel.getDateFrom(date: postedDate)
-                    if finalDate == todayPost {
-                        count += 1
-                        
-                    }
-                }
-            }
-            if count >= 5 {
-                DispatchQueue.main.async {
-                    self.alert(title: .localized(.oopsTitle),
-                               message: .localized(.postLimitReachedOut))
-                }
-                return
-            }
+        
+        if checkTodaysLimit() {
+            viewModel.uploadPost(text: text, type: config)
+            coordinator.pop(vc: self)
         }
-        viewModel.uploadPost(text: text, type: config)
-        coordinator.pop(vc: self)
     }
 
     
     // MARK: Helpers
+    
+    func checkTodaysLimit() -> Bool {
+        let todayPost = Utils.getDateFrom(date: Date())
+        var count = 0
+        for rep in viewModel.postsLocal {
+            if let postedDate = rep.timestamp {
+                let finalDate = Utils.getDateFrom(date: postedDate)
+                if finalDate == todayPost {
+                    count += 1
+                }
+            }
+        }
+        if count >= 5 {
+            DispatchQueue.main.async {
+                self.alert(title: .localized(.oopsTitle),
+                           message: .localized(.postLimitReachedOut))
+            }
+            return false
+        }
+        for rep in viewModel.repliesLocal {
+            if let postedDate = rep.timestamp {
+                let finalDate = Utils.getDateFrom(date: postedDate)
+                if finalDate == todayPost {
+                    count += 1
+                }
+            }
+        }
+        if count >= 5 {
+            DispatchQueue.main.async {
+                self.alert(title: .localized(.oopsTitle),
+                           message: .localized(.postLimitReachedOut))
+            }
+            return false
+        }
+        
+        return true
+    }
     
     func setupObserver() {
         viewModel.error.bind { [weak self] _ in
@@ -158,14 +167,17 @@ class UploadPostViewController: UIViewController {
     
     func configureUI(){
         view.backgroundColor = .white
-       configureNavigationBar()
-        
-        let stackCaption = UIStackView(arrangedSubviews: [profileImageView, captionTextView])
+        configureNavigationBar()
+        captionTextView.delegate = self
+        let stackCaption = UIStackView(arrangedSubviews: [profileImageView,
+                                                          captionTextView])
         stackCaption.axis = .horizontal
         stackCaption.spacing = 12
         stackCaption.alignment = .leading
         
-        let stack = UIStackView(arrangedSubviews: [replyLabel, stackCaption])
+        let stack = UIStackView(arrangedSubviews: [replyLabel,
+                                                   stackCaption,
+                                                   charactersLeft])
         stack.axis = .vertical
         //stack.alignment = .leading
         stack.spacing = 12
@@ -207,5 +219,16 @@ class UploadPostViewController: UIViewController {
         replyLabel.handleMentionTap { mention in
             print("DEBUG: Mentioned user is \(mention)")
         }
+    }
+}
+
+extension UploadPostViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if textView.text.count == CHARACTERS_LENGTH {
+            return false
+        }
+        let math = CHARACTERS_LENGTH - textView.text.count
+        charactersLeft.text = .localizedFormat(.charLeft, String(math))
+        return true
     }
 }

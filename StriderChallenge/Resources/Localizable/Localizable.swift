@@ -14,6 +14,7 @@ enum Localizable: String {
     case noCityMentioned = "no_city_mentioned"
     case minMaxTempreture = "min_max_tempreture"
     case windSpeed = "wind_speed"
+    case charLeft = "char_left"
     
     case postLimitReachedOut = "post_limit_reached_out"
     
