@@ -17,7 +17,9 @@ Please before run the project, make sure that you've runned the pod install and 
 
 # Critique
 
-The project was made using Firebase you don't need an API running or keep an backend microservice running for the seek of this project. Also, Firebase allows you to run your application offline.
+The project was made using Firebase but in the future, for good project scaling we should improve our own API. Also, Firebase allows you to run your application offline.
+
+One big problem of this project is the missing unit tests implementation and also, UI Testing. We should do that before send it to production.
 
 By purpose, I made completions block use plus bindables. We could avoid this implementing Bindables with Pairs, something like Bindable<LeftValue, RightValue>. In the PostRepository, we're receiving the UserRepository but we could improve it setting the UserRepository as a singleton plus, which allows us to define a singleton and create a new instance when it needed. 
 
