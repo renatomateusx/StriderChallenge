@@ -28,7 +28,7 @@ PostViewModel has a massive postService injected. We could solve it by setting a
 
 #Assuming you've got multiple crash reports and reviews saying the app is not working properly and is slow for specific models, what would be your strategy to tackle the problem? 
 
-I implemented the Crashlytics, which is good for the project because once we have multiple crashes, we need the Firebase crashlytics to tell us where we need to find the problem. If you guys need to check the dashboard, you can use this account. email: strider.challenge@gmail.com | password: striderChallenge2022! Everything is already configured.
+I implemented the Crashlytics, which is good for the project because once we have multiple crashes, we need the Firebase crashlytics to tell us where we need to find the problem. If you guys need to check the dashboard, you can use this account. email: strider.challenge@gmail.com | password: striderChallenge2022! Everything is already configured. Here is the link: https://console.firebase.google.com/u/0/project/striderchallenge-4d39b/crashlytics/app/ios:com.renatomateusx.striderchallenge/issues
 
 # Assuming your app has now thousands of users thus a lot of posts to show in the feed. What do you believe should be improved in this initial version and what strategies/proposals you could formulate for such a challenge?
 
