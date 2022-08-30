@@ -13,6 +13,7 @@
 "min_max_tempreture" = "Low: %@° High: %@°";
 "wind_speed" = "Wind: %@ (%@)";
 
+"post_limit_reached_out" = "Post limit reached out";
 
 // No data downloaded
 

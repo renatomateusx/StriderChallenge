@@ -12,23 +12,63 @@ class HomeCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     
-    private weak var homeViewController: HomeViewController?
-    
+    private weak var homeViewController: MainTabViewController?
+    let feedViewModel = FeedViewModel(with: PostsRepository(),
+                                  userService: UserRepository(),
+                                  config: .post)
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
-        let viewModel = HomeViewModel(with: PostsRepository(), coordinator: self)
+        let viewModel = MainTabViewModel(with: PostsRepository(),
+                                         userService: UserRepository(),
+                                         coordinator: self)
         
-        let vc = HomeViewController()
-        vc.viewModel = viewModel
+        let vc = MainTabViewController(viewModel: viewModel, coordinator: self)
         navigationController.pushViewController(vc, animated: false)
         homeViewController = vc
     }
     
-    func goToDetails() {
-        print("details")
+    func goToPost(vc: UIViewController) {
+        DispatchQueue.main.async {
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func goToVC(vc: UIViewController) {
+        DispatchQueue.main.async {
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func goToReply(post: Post) {
+        DispatchQueue.main.async {
+            
+            self.feedViewModel.setConfig(.reply(post))
+            self.feedViewModel.fetchReplies(forUser: post.user)
+            let controller = UploadPostViewController(viewModel: self.feedViewModel,
+                                                      coordiinator: self,
+                                                      user: post.user,
+                                                      config: .reply(post))
+            
+            
+            self.navigationController.pushViewController(controller, animated: true)
+        }
+    }
+    
+    func pop(vc: UIViewController) {
+        self.navigationController.popToRootViewController(animated: true)
+    }
+    
+    func goToProfile(user: User) {
+        DispatchQueue.main.async {
+            let controller = ProfileViewController(user: user)
+            controller.viewModel = self.feedViewModel
+            controller.userViewModel = UserViewModel(userService: UserRepository())
+            controller.coordinator = self
+            self.navigationController.pushViewController(controller, animated: true)
+        }
     }
 }
 

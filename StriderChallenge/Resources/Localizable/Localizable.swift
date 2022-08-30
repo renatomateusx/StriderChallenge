@@ -15,6 +15,8 @@ enum Localizable: String {
     case minMaxTempreture = "min_max_tempreture"
     case windSpeed = "wind_speed"
     
+    case postLimitReachedOut = "post_limit_reached_out"
+    
     // service failure mock
     
     case noDataDownloaded = "no_data_downloaded"
