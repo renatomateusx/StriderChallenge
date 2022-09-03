@@ -37,3 +37,7 @@ I implemented the Crashlytics, which is good for the project because once we hav
 I understand that the architecture of the project should be good enought to support the project scaling, that is the reason I chose the MVVM-C pattern. Also, I know that in the future we should replace the Firebase to a AWS API that can be more scaled.
 
 
+
+https://user-images.githubusercontent.com/4579323/188279116-9cf2c0e4-caa2-4f05-b184-5b53abdffed2.mp4
+
+
